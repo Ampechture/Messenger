@@ -11,7 +11,8 @@
     <ContentPage.Content>
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
             <Label Text="Введите номер телефона:"></Label>
-            <Editor Text="{Binding EnteredPhoneNumber}" Placeholder="Номер"></Editor>
+            <Entry Text="{Binding EnteredPhoneNumber}" Keyboard="Telephone" 
+                    Placeholder="Номер"></Entry>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
