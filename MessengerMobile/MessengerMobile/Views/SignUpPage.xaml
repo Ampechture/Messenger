@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:MessengerMobile.ViewModels;assembly=MessengerMobile"
+             x:Class="MessengerMobile.Views.SignUpPage">
+    <ContentPage.BindingContext>
+        <viewModels:SignUpPageViewModel></viewModels:SignUpPageViewModel>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="Введите номер телефона:"></Label>
+            <Editor Text="{Binding EnteredPhoneNumber}"></Editor>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Forms;
 
-namespace MessengerMobile
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace MessengerMobile.Views
 {
-    public partial class MainPage : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class SignUpPage : ContentPage
     {
-        public MainPage()
+        public SignUpPage()
         {
             InitializeComponent();
         }

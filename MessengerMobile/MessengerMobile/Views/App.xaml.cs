@@ -1,4 +1,5 @@
 ﻿using System;
+using MessengerMobile.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,7 +13,7 @@ namespace MessengerMobile
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new SignUpPage();
         }
 
         protected override void OnStart()
