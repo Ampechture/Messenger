@@ -13,12 +13,8 @@ namespace MessengerMobile.ViewModels
             {
                 if (_enteredPhoneNumber == value) return;
                 _enteredPhoneNumber = value;
-                
-                if (Model.ValidatePhoneNumber(_enteredPhoneNumber))
-                {
-                    if (Model.TrySignUpWithNumber(_enteredPhoneNumber))
-                        SignedUp?.Invoke();
-                }
+
+                StartValidatingAndSigningUp();
 
                 OnPropertyChanged();
             }
@@ -31,6 +27,19 @@ namespace MessengerMobile.ViewModels
         private string _enteredPhoneNumber;
 
         private SignUpPageModel Model { get; } = new();
+
+        private async void StartValidatingAndSigningUp()
+        {
+            var validatedPhoneNumber = Model.ValidatePhoneNumber(_enteredPhoneNumber);
+            if (validatedPhoneNumber == null) return;
+
+            var isPhoneAlreadyUsed = await Model.IsPhoneNumberAlreadyUsed(validatedPhoneNumber);
+            if (isPhoneAlreadyUsed) return;
+
+            var haveSignedUp = await Model.TrySignUpWithNumber(validatedPhoneNumber);
+            if (haveSignedUp)
+                SignedUp?.Invoke();
+        }
 
         #endregion
     }

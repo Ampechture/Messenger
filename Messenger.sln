@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessengerMobile", "Messenge
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessengerMobile.Droid", "MessengerMobile\MessengerMobile.Droid\MessengerMobile.Droid.csproj", "{A1CA3F6B-EE42-41D1-A7B7-70C71771695A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessengerCommon", "MessengerCommon\MessengerCommon.csproj", "{74B1D16F-DDD5-4CE1-B6B4-5C1915EB8728}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|iPhone = Ad-Hoc|iPhone
@@ -56,5 +58,21 @@ Global
 		{A1CA3F6B-EE42-41D1-A7B7-70C71771695A}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{A1CA3F6B-EE42-41D1-A7B7-70C71771695A}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{A1CA3F6B-EE42-41D1-A7B7-70C71771695A}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
+		{74B1D16F-DDD5-4CE1-B6B4-5C1915EB8728}.Ad-Hoc|iPhone.ActiveCfg = Debug|Any CPU
+		{74B1D16F-DDD5-4CE1-B6B4-5C1915EB8728}.Ad-Hoc|iPhone.Build.0 = Debug|Any CPU
+		{74B1D16F-DDD5-4CE1-B6B4-5C1915EB8728}.AppStore|iPhone.ActiveCfg = Debug|Any CPU
+		{74B1D16F-DDD5-4CE1-B6B4-5C1915EB8728}.AppStore|iPhone.Build.0 = Debug|Any CPU
+		{74B1D16F-DDD5-4CE1-B6B4-5C1915EB8728}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74B1D16F-DDD5-4CE1-B6B4-5C1915EB8728}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74B1D16F-DDD5-4CE1-B6B4-5C1915EB8728}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{74B1D16F-DDD5-4CE1-B6B4-5C1915EB8728}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{74B1D16F-DDD5-4CE1-B6B4-5C1915EB8728}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{74B1D16F-DDD5-4CE1-B6B4-5C1915EB8728}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{74B1D16F-DDD5-4CE1-B6B4-5C1915EB8728}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74B1D16F-DDD5-4CE1-B6B4-5C1915EB8728}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74B1D16F-DDD5-4CE1-B6B4-5C1915EB8728}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{74B1D16F-DDD5-4CE1-B6B4-5C1915EB8728}.Release|iPhone.Build.0 = Release|Any CPU
+		{74B1D16F-DDD5-4CE1-B6B4-5C1915EB8728}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{74B1D16F-DDD5-4CE1-B6B4-5C1915EB8728}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

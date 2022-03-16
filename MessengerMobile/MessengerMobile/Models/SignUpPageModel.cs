@@ -1,21 +1,27 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Threading.Tasks;
+using MessengerCommon;
+using MessengerCommon.DTOs;
 using MessengerMobile.Services;
 
 namespace MessengerMobile.Models
 {
     internal class SignUpPageModel
     {
-        private static readonly Regex PhoneNumberRegex = new Regex(@"^\+\d\d\d\d\d\d\d\d\d\d\d$");  // TODO: Refactor
-
-        public bool ValidatePhoneNumber(string enteredPhoneNumber)
+        public PhoneNumber ValidatePhoneNumber(string phoneNumber)
         {
-            return PhoneNumberRegex.IsMatch(enteredPhoneNumber);
+            return PhoneNumber.IsStringPhoneNumber(phoneNumber)
+                ? new PhoneNumber(phoneNumber)
+                : null;
         }
 
-        public bool TrySignUpWithNumber(string enteredPhoneNumber)
+        public async Task<bool> IsPhoneNumberAlreadyUsed(PhoneNumber phoneNumber)
         {
-            if (!enteredPhoneNumber.EndsWith("81")) return false;
-            
+            return await DataStore.Instance.WebClient.IsPhoneNumberAlreadyUsed(phoneNumber);
+        }
+        
+        public async Task<bool> TrySignUpWithNumber(PhoneNumber phoneNumber)
+        {
+            await DataStore.Instance.WebClient.SignUpUser(new SignUpNewUserDto { PhoneNumber = phoneNumber });
             DataStore.Instance.UserGuid = DataStore.Instance.DebugUserGuid;
             return true;
         }
