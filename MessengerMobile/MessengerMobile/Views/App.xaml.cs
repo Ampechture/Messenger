@@ -13,7 +13,8 @@ namespace MessengerMobile
         {
             InitializeComponent();
 
-            MainPage = new SignUpPage();
+            MainPage = new NavigationPage();
+            (MainPage as NavigationPage)?.PushAsync(new SignUpPage());
         }
 
         protected override void OnStart()

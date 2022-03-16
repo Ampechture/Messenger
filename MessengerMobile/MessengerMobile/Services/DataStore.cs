@@ -2,15 +2,17 @@
 
 namespace MessengerMobile.Services
 {
-    public class DataStore
+    internal class DataStore
     {
-        public DataStore Instance => _instance ??= new DataStore();
+        public static DataStore Instance => _instance ??= new DataStore();
         
         public Guid UserGuid { get; set; }
+        
+        public Guid DebugUserGuid { get; } = Guid.Parse("3F131756-CEF6-46F0-A7E4-92858F77DFE3");
 
         #region PrivatePart
 
-        private DataStore _instance;
+        private static DataStore _instance;
 
         private DataStore()
         {
