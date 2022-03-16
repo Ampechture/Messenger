@@ -1,5 +1,4 @@
-﻿using System;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 using MessengerMobile.Services;
 
 namespace MessengerMobile.Models

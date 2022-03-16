@@ -1,5 +1,4 @@
-﻿using System;
-using MessengerMobile.Views;
+﻿using MessengerMobile.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
