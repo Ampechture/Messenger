@@ -4,7 +4,7 @@ using MessengerMobile.Annotations;
 
 namespace MessengerMobile.ViewModels;
 
-internal class BaseViewModel
+internal class BaseViewModel : INotifyPropertyChanged
 {
     public event PropertyChangedEventHandler PropertyChanged;
 

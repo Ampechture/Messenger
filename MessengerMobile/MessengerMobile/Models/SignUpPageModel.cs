@@ -21,7 +21,16 @@ namespace MessengerMobile.Models
         
         public async Task<bool> TrySignUpWithNumber(PhoneNumber phoneNumber)
         {
-            await DataStore.Instance.WebClient.SignUpUser(new SignUpNewUserDto { PhoneNumber = phoneNumber });
+            var signUpNewUserDto = new SignUpNewUserDto
+            {
+                PhoneNumber = phoneNumber,
+                Name = new Name
+                {
+                    FirstName = "Jonn",
+                    LastName = "Doe"
+                }
+            };
+            await DataStore.Instance.WebClient.SignUpUser(signUpNewUserDto);
             DataStore.Instance.UserGuid = DataStore.Instance.DebugUserGuid;
             return true;
         }
