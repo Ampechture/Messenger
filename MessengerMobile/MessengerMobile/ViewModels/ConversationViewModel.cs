@@ -2,7 +2,7 @@
 
 namespace MessengerMobile.ViewModels;
 
-internal class ConversationViewModel : BaseViewModel
+public class ConversationViewModel : BaseViewModel
 {
     public ConversationViewModel(ConversationModel model)
     {

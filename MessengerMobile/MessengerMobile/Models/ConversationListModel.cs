@@ -5,7 +5,7 @@ using MessengerMobile.Services;
 
 namespace MessengerMobile.Models;
 
-internal class ConversationListModel
+public class ConversationListModel
 {
     public List<ConversationModel> Conversations { get; } = new();
 

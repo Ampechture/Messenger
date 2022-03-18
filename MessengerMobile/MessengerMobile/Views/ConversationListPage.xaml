@@ -16,7 +16,13 @@
                         <ViewCell>
                             <Frame>
                                 <StackLayout>
-                                    <Label Text="{Binding Name}"></Label>
+                                    <Label Text="{Binding Name}">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnConversationTapped" 
+                                                                  CommandParameter="{Binding .}">
+                                            </TapGestureRecognizer>
+                                        </Label.GestureRecognizers>
+                                    </Label>
                                 </StackLayout>
                             </Frame>
                         </ViewCell>

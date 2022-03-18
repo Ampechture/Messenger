@@ -4,7 +4,7 @@ using MessengerMobile.Models;
 
 namespace MessengerMobile.ViewModels;
 
-internal class ConversationListViewModel : BaseViewModel
+public class ConversationListViewModel : BaseViewModel
 {
     public ConversationListViewModel()
     {

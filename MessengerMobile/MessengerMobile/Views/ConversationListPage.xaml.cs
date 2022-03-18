@@ -1,4 +1,5 @@
-﻿using MessengerMobile.ViewModels;
+﻿using System;
+using MessengerMobile.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,4 +12,11 @@ public partial class ConversationListPage : ContentPage
     {
         InitializeComponent();
     }
-}
+
+    private void OnConversationTapped(object sender, EventArgs e)
+    {
+        if (e is not TappedEventArgs {Parameter: ConversationViewModel viewModel}) return;
+        var conversationPage = new ConversationPage(viewModel);
+        (Application.Current.MainPage as NavigationPage)?.PushAsync(conversationPage);
+    }
+} 

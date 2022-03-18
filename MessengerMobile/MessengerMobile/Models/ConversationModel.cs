@@ -7,7 +7,7 @@ using MessengerMobile.Services;
 
 namespace MessengerMobile.Models;
 
-internal class ConversationModel : IGuided
+public class ConversationModel : IGuided
 {
     public ConversationModel(ConversationDto dto)
     {

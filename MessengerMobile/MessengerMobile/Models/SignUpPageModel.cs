@@ -5,7 +5,7 @@ using MessengerMobile.Services;
 
 namespace MessengerMobile.Models
 {
-    internal class SignUpPageModel
+    public class SignUpPageModel
     {
         public PhoneNumber ValidatePhoneNumber(string phoneNumber)
         {

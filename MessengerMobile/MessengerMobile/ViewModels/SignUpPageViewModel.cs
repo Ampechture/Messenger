@@ -3,7 +3,7 @@ using MessengerMobile.Models;
 
 namespace MessengerMobile.ViewModels
 {
-    internal class SignUpPageViewModel : BaseViewModel
+    public class SignUpPageViewModel : BaseViewModel
     {
         public bool HaveError => !string.IsNullOrEmpty(ErrorString);
         public string ErrorString
