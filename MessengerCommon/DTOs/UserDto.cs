@@ -1,6 +1,8 @@
-﻿namespace MessengerCommon.DTOs;
+﻿using MessengerCommon.Interfaces;
 
-public class UserDto
+namespace MessengerCommon.DTOs;
+
+public class UserDto : IGuided
 {
     public Guid Guid { get; set; }
         

@@ -1,12 +1,13 @@
-﻿using Xamarin.Forms;
+﻿using MessengerMobile.ViewModels;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace MessengerMobile.Views;
 
 [XamlCompilation(XamlCompilationOptions.Compile)]
-public partial class DialogListPage : ContentPage
+public partial class ConversationListPage : ContentPage
 {
-    public DialogListPage()
+    public ConversationListPage()
     {
         InitializeComponent();
     }

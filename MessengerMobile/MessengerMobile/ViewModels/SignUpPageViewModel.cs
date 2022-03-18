@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using MessengerMobile.Models;
 
 namespace MessengerMobile.ViewModels

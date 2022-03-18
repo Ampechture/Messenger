@@ -1,4 +1,5 @@
 ﻿using System;
+using MessengerMobile.Models;
 
 namespace MessengerMobile.Services
 {
@@ -6,7 +7,7 @@ namespace MessengerMobile.Services
     {
         public static DataStore Instance => _instance ??= new DataStore();
         
-        public Guid UserGuid { get; set; }
+        public UserModel User { get; set; }
         
         public Guid DebugUserGuid { get; } = Guid.Parse("3F131756-CEF6-46F0-A7E4-92858F77DFE3");
 

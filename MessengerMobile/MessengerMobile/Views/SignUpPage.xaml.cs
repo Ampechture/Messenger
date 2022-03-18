@@ -17,7 +17,7 @@ namespace MessengerMobile.Views
         private async void StartNavigatingToDialogList()
         {
             if (Application.Current.MainPage is NavigationPage mainPage)
-                await mainPage.PushAsync(new DialogListPage());
+                await mainPage.PushAsync(new ConversationListPage());
         }
     }
 }

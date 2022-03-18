@@ -30,8 +30,8 @@ namespace MessengerMobile.Models
                     LastName = "Doe"
                 }
             };
-            await DataStore.Instance.WebClient.SignUpUser(signUpNewUserDto);
-            DataStore.Instance.UserGuid = DataStore.Instance.DebugUserGuid;
+            var userDto = await DataStore.Instance.WebClient.SignUpUser(signUpNewUserDto);
+            DataStore.Instance.User = new UserModel(userDto);
             return true;
         }
     }

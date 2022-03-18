@@ -6,5 +6,7 @@ public class Name
     
     public string LastName { get; set; }
 
-    public string FullName => $"{FirstName} {LastName}";
+    public string FullName => string.IsNullOrWhiteSpace(LastName)
+        ? FirstName
+        : $"{FirstName} {LastName}";
 }
