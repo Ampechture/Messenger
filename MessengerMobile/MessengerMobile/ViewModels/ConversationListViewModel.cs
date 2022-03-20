@@ -23,7 +23,11 @@ public class ConversationListViewModel : BaseViewModel
         
         Conversations.Clear();
         foreach (var conversationModel in Model.Conversations)
-            Conversations.Add(new ConversationViewModel(conversationModel));
+        {
+            var conversationViewModel = new ConversationViewModel();
+            conversationViewModel.Initialize(conversationModel);
+            Conversations.Add(conversationViewModel);
+        }
     }
 
     private async void StartLoadingConversations()

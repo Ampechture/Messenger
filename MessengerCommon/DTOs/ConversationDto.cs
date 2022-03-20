@@ -9,4 +9,8 @@ public class ConversationDto : IGuided
     public List<UserDto> Participants { get; set; }
     
     public string Name { get; set; }
+    
+    public MessageDto LastMessage { get; set; }
+    
+    public int UnreadCount { get; set; }
 }

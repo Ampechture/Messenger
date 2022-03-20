@@ -13,4 +13,5 @@ internal interface IWebClient
     public Task<UserDto> SignUpUser(SignUpNewUserDto signUpUserDto);
 
     public Task<List<ConversationDto>> GetConversations(Guid userGuid);
+    public Task<List<MessageDto>> GetMessages(Guid conversationGuid);
 }
