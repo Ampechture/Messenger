@@ -17,7 +17,7 @@ public class MessageViewModel : BaseViewModel
         : Model.Sender.Name.FullName;
 
 
-    public string HorizontalOption => IsIncoming ? "StartAndExpand" : "EndEndExpand";
+    public string HorizontalOption => IsIncoming ? "Start" : "End";
 
     #region PrivatePart
 

@@ -13,6 +13,8 @@ public class ConversationViewModel : BaseViewModel
 
     public async Task LoadMessages()
     {
+        if (Model == null) return;
+        
         var messages = await Model.LoadMessages();
         Messages.Clear();
         foreach (var message in messages)

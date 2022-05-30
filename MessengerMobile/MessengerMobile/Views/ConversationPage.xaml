@@ -9,14 +9,14 @@
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
-            <ListView ItemsSource="{Binding Messages}">
+            <ListView ItemsSource="{Binding Messages}" HasUnevenRows="True" SelectionMode="None">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Frame HorizontalOptions="{Binding HorizontalOption}">
+                            <Frame HorizontalOptions="" Padding="10" Margin="5">
                                 <StackLayout>
-                                    <Label Text="{Binding SenderName}"></Label>
-                                    <Label Text="{Binding Text}"></Label>
+                                    <Label Text="{Binding Text}" HorizontalOptions="Fill"></Label>
+                                    <Label Text="{Binding SenderName}" TextColor="DarkGray" HorizontalOptions="EndAndExpand"></Label>
                                 </StackLayout>
                             </Frame>
                         </ViewCell>

@@ -14,6 +14,7 @@ public partial class ConversationPage : ContentPage
 {
     public ConversationPage(ConversationViewModel viewModel)
     {
+        InitializeComponent();
         BindingContext = viewModel;
     }
 
